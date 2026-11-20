@@ -1,0 +1,22 @@
+name: Proposer une idée
+description: Une fonction nouvelle, ou une façon de faire plus simple.
+labels: ["idée"]
+body:
+  - type: textarea
+    id: besoin
+    attributes:
+      label: Le besoin
+      description: Ce que tu veux faire et que tu ne peux pas faire aujourd'hui.
+    validations:
+      required: true
+  - type: textarea
+    id: idee
+    attributes:
+      label: L'idée
+      description: Comment tu l'imagines. Un croquis ou une capture aide.
+  - type: checkboxes
+    id: manette
+    attributes:
+      label: Usage
+      options:
+        - label: L'idée doit marcher à la manette, sans clavier ni souris.

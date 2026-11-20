@@ -1,0 +1,56 @@
+name: Un jeu ne s'importe pas ou ne se convertit pas
+description: L'import ou la conversion d'un jeu échoue dans la bibliothèque.
+labels: ["jeu"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Ce modèle est pour un import ou une conversion qui échoue. Un jeu qui plante une fois lancé relève le plus souvent d'[AnyPS5](https://github.com/boykopovar/AnyPS5/issues).
+        Ne joins aucun fichier de jeu, et ne donne aucun lien de téléchargement.
+  - type: input
+    id: jeu
+    attributes:
+      label: Jeu
+      description: Son nom et son identifiant (PPSA…), affiché dans les détails du jeu.
+      placeholder: Nom du jeu (PPSA01234)
+    validations:
+      required: true
+  - type: dropdown
+    id: source
+    attributes:
+      label: D'où vient le jeu
+      options:
+        - Image .ffpfsc
+        - Image .exfat
+        - Archive .zip, .7z ou .rar
+        - Dossier déjà extrait
+    validations:
+      required: true
+  - type: dropdown
+    id: etape
+    attributes:
+      label: Étape qui échoue
+      options:
+        - Analyse
+        - Extraction
+        - Déballage
+        - Conversion AnyPS5
+        - Bibliothèques
+        - Je ne sais pas
+    validations:
+      required: true
+  - type: textarea
+    id: rapport
+    attributes:
+      label: Rapport de diagnostic
+      description: Sur le jeu, △ Options › Dépannage › « Copier le rapport de diagnostic », puis colle-le ici.
+      render: text
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Version d'AnyPS5 Library
+      placeholder: "0.1.0"
+    validations:
+      required: true

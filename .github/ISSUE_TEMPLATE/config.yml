@@ -1,0 +1,5 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Un jeu plante ou s'affiche mal une fois lancé
+    url: https://github.com/boykopovar/AnyPS5/issues
+    about: C'est le plus souvent AnyPS5, pas la bibliothèque. Son suivi est le bon endroit.

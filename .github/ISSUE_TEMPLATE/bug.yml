@@ -1,0 +1,58 @@
+name: Signaler un problème
+description: La bibliothèque fait une erreur, se bloque ou affiche quelque chose de faux.
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Merci de prendre le temps de signaler ce problème. Ne joins aucun fichier de jeu.
+  - type: textarea
+    id: quoi
+    attributes:
+      label: Ce qui se passe
+      description: Ce que tu as fait, ce que tu attendais, ce que tu as obtenu.
+    validations:
+      required: true
+  - type: textarea
+    id: etapes
+    attributes:
+      label: Pour reproduire
+      placeholder: |
+        1. Ouvrir…
+        2. Choisir…
+        3. Le problème apparaît.
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Version d'AnyPS5 Library
+      description: Elle est écrite en bas à gauche de l'écran Paramètres.
+      placeholder: "0.1.0"
+    validations:
+      required: true
+  - type: input
+    id: anyps5
+    attributes:
+      label: Version d'AnyPS5
+      description: Paramètres, catégorie « Moteur AnyPS5 ».
+      placeholder: v0.1.5
+  - type: input
+    id: windows
+    attributes:
+      label: Windows
+      placeholder: Windows 11 24H2
+  - type: dropdown
+    id: manette
+    attributes:
+      label: Manette
+      options:
+        - DualSense
+        - DualShock 4
+        - Autre manette
+        - Clavier et souris
+  - type: textarea
+    id: captures
+    attributes:
+      label: Captures d'écran ou journal
+      description: Glisse ici une image, ou colle le texte d'une erreur.
